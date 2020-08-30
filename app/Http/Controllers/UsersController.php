@@ -39,7 +39,7 @@ class UsersController extends Controller
         //バリデーションの結果がエラーの場合
         if ($validator->fails())
         {
-          return redirect()->back()->withErrors($validator->errors())->withInput();
+            return redirect()->back()->withErrors($validator->errors())->withInput();
         }
         
         $user = User::find($request->id);
