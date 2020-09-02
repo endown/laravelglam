@@ -50,8 +50,16 @@ class PostsController extends Controller
         $post->save();
         
         $request->photo->storeAs('public/post_images', $post->id . '.jpg');
-        
-        // 「/」 ルートにリダイレクト
+
         return redirect('/');
     }
+
+    public function destroy($post_id)
+    {
+        $post = Post::find($post_id);
+        // 上のコードで取得したデータをデータベースから削除
+        $post->delete();
+        return redirect('/');
+    }
+
 }

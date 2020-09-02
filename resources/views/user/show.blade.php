@@ -8,10 +8,10 @@
     <div class="col-md-4 text-center">
       @if ($user->profile_photo)
         <p>
-          <img class="round-img" src="{{ asset('storage/user_images/' . $user->profile_photo) }}"/>
+          <img class="round-img" alt="プロフィール画像" src="{{ asset('storage/user_images/' . $user->profile_photo) }}"/>
         </p>
         @else
-          <img class="round-img" src="{{ asset('/images/blank_profile.png') }}"/>
+          <img class="round-img" alt="プロフィール画像" src="{{ asset('/images/blank_profile.png') }}"/>
       @endif
     </div>
     <div class="col-md-8">
